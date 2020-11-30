@@ -27,6 +27,7 @@ nav.top-nav li{
   padding: 5px;
   user-select: none;
   position: relative;
+  text-align: right;
 }
 
 nav.top-nav li:hover{
