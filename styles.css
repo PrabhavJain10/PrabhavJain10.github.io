@@ -77,9 +77,20 @@ nav.top-nav a:active{
   margin-top: -30px;
 }
 
-.projects-container {
-    height: 1000px;
-    background-color: #eee;
+.projects{
+  background-color: #ddd;
+}
+
+.project-title{
+  margin-top: 50px;
+  margin-left: 125px;
+  display:block;
+  color: #10BC10;
+  font-family:'Courier New', Courier, monospace;
+}
+
+.past-projects-container {
+    height: 600px;
 		padding-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -89,19 +100,93 @@ nav.top-nav a:active{
 .project-wrapper{
   height: 500px;
   width: 500px;
-  margin-top: 50px;
+  color: white;
 }
 
 #one{
   margin-left: 125px;
-  background-color: #5CD85A;
+  background-color: #107869;
 }
 
 #two{
   margin-left: 75px;
-  background-color: #107869;
+  background-color: #5CD85A;
 }
 
+
+
+/* Slideshow container */
+.slideshow-container {
+  top: -30px;
+  position: relative;
+  background: white;
+}
+
+/* Slides */
+.mySlides {
+  margin-left: 125px;
+  width: 1000px;
+  display: none;
+  padding: 80px;
+  text-align: left;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev{
+  padding-left: 75px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  padding-right: 75px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
 
 
 

@@ -20,13 +20,48 @@
       <p id="me">——Prabhav Jain——</p>
     </div>
   </div>
-  <div class="projects-container">
-    <div class="project-wrapper" id="one">
-      <p class="project-name">Machine Learning</p>
-    </div>
-    <div class="project-wrapper" id="two">
-      <p class="project-name">Climbing Wall Designer</p>
+  <div class="projects">
+    <h1 class="project-title">Past Projects</h1>
+    <div class="past-projects-container">
+      <a href="machine-learning.html">
+        <div class="project-wrapper" id="one">
+          <p class="project-name">Machine Learning</p>
+      </div> </a>
+      <div class="project-wrapper" id="two">
+        <p class="project-name">Climbing Wall Designer</p>
+      </div>
     </div>
   </div>
+
+  <div class="slideshow-container">
+    <h1 class="project-title">Past Essays</h1>
+    <!-- Full-width slides/quotes -->
+    <div class="mySlides">
+      <a href="Hume_and_Miracles.pdf" target="_blank"> <p class="essay-title">Hume on Miracles</p> </a>
+      <p>In this essay I explore and evaluate David Hume's arguments regarding why miracles should never be believed.</p>
+    </div>
+
+    <div class="mySlides">
+      <a href="Propaganda.pdf" target="_blank"> <p class="essay-title">Sino-Soviet Alliance Propaganda</p> </a>
+      <p>In this essay I examine the ways in which propaganda was employed by the Chinese government to boost relations with the USSR.</p>
+    </div>
+
+    <div class="mySlides">
+      <a href="Dying_to_Live_Longer.pdf" target="_blank"> <p class="essay-title">Dying to Live Longer</p> </a>
+      <p>An analysis of whether humans should rationally desire immortality, focused on arguments by Bertrand Russel and Lucretius.</p>
+    </div>
+
+    <!-- Next/prev buttons -->
+    <a class="prev" onclick="plusSlides(-1)" onkeydown="plusSlides(-1)" tabindex=0>&#10094;</a>
+    <a class="next" onclick="plusSlides(1)" onkeydown="plusSlides(1)" tabindex=0>&#10095;</a>
+  </div>
+
+  <!-- Dots/bullets/indicators -->
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)" onkeydown="currentSlide(1)" tabindex=0></span>
+      <span class="dot" onclick="currentSlide(2)" onkeydown="currentSlide(2)"tabindex=0></span>
+      <span class="dot" onclick="currentSlide(3)" onkeydown="currentSlide(3)"tabindex=0></span>
+    </div>
+  <script src="slideshow.js"></script>
 </body>
 </html>
