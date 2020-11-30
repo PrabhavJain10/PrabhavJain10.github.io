@@ -1,3 +1,4 @@
+/* Overall Styling: mostly the nav bar */
 nav.top-nav {
   background-color: white;
   position: fixed;
@@ -16,7 +17,7 @@ nav.top-nav ul{
 }
 
 nav.top-nav li{
-  font-family: sans-serif;
+  font-family:'Courier New', Courier, monospace;
   font-weight: bold;
   color: #228B22;
   margin: 5px;
@@ -25,6 +26,7 @@ nav.top-nav li{
   user-select: none;
   position: relative;
   text-align: right;
+  font-size: 20px;
 }
 
 nav.top-nav a:link{
@@ -40,9 +42,10 @@ nav.top-nav a:hover{
 }
 
 nav.top-nav a:active{
-  filter: brightness(70%);
+  color: #006400;
 }
 
+/* Styling for home page */
 .home {
   /* The image used */
   background-image: url("main.jpeg");
@@ -70,11 +73,45 @@ nav.top-nav a:active{
 #me{
   font-size: 50px;
   font-weight: bold;
-  font-family:monospace;
+  font-family:'Courier New', Courier, monospace;
   margin-top: -30px;
 }
 
-.projects{
-  height: 1000px;
-  background-color: #eee;
+.projects-container {
+    height: 1000px;
+    background-color: #eee;
+		padding-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+}
+
+.project-wrapper{
+  height: 500px;
+  width: 500px;
+  margin-top: 50px;
+}
+
+#one{
+  margin-left: 125px;
+  background-color: #5CD85A;
+}
+
+#two{
+  margin-left: 75px;
+  background-color: #107869;
+}
+
+
+
+
+
+
+
+
+
+/* Stlying for bio page */
+
+#portrait{
+  height: 500px;
 }
