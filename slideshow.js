@@ -1,5 +1,5 @@
 var slideIndex = 1;
-var colors = ["blue", "green", "yellow"];
+var colors = ["#1A4314", "#3F4122", "#3D550C"];
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -12,7 +12,7 @@ function currentSlide(n) {
 
 function showSlides(n, color) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
+  var slides = document.getElementsByClassName("my-slides");
   var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}

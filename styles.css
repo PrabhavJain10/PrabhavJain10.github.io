@@ -1,4 +1,8 @@
 /* Overall Styling: mostly the nav bar */
+html {
+  scroll-behavior: smooth;
+}
+
 nav.top-nav {
   background-color: white;
   position: fixed;
@@ -19,7 +23,7 @@ nav.top-nav ul{
 nav.top-nav li{
   font-family:'Courier New', Courier, monospace;
   font-weight: bold;
-  color: #228B22;
+  color: #007304;
   margin: 5px;
   display: inline-block;
   padding: 5px;
@@ -27,14 +31,16 @@ nav.top-nav li{
   position: relative;
   text-align: right;
   font-size: 20px;
+  padding-right: 10px;
 }
 
 nav.top-nav a:link{
   text-decoration: none;
+    color: #007304;
 }
 
 nav.top-nav a:visited{
-  color: #228B22;
+  color: #007304;
 }
 
 nav.top-nav a:hover{
@@ -42,7 +48,7 @@ nav.top-nav a:hover{
 }
 
 nav.top-nav a:active{
-  color: #006400;
+  color: #004600;
 }
 
 /* Styling for home page */
@@ -60,6 +66,7 @@ nav.top-nav a:active{
   background-size: cover;
 }
 
+/* styling the name and intro text */
 .text{
   color: white;
   position:sticky;
@@ -77,22 +84,24 @@ nav.top-nav a:active{
   margin-top: -30px;
 }
 
-.projects{
+/* styling the projects section */
+
+#projects{
   background-color: #ddd;
 }
 
 .project-title{
-  margin-top: 50px;
+  padding-top: 90px;
   margin-left: 125px;
   display:block;
-  color: #10BC10;
+  color: #007304;
   font-family:'Courier New', Courier, monospace;
 }
 
 .past-projects-container {
     height: 600px;
 		padding-top: 30px;
-    display: grid;
+    display:inline-grid;
     grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
 }
@@ -103,14 +112,54 @@ nav.top-nav a:active{
   color: white;
 }
 
-#one{
+.project-links{
   margin-left: 125px;
-  background-color: #107869;
+}
+
+#one{
+  float: left;
+  background-color: #00493A;
 }
 
 #two{
-  margin-left: 75px;
-  background-color: #5CD85A;
+  float: right;
+  margin-left: 125px;
+  background-color: #490010 ;
+}
+
+.project-image{
+  margin-left: 100px;
+  margin-top: 60px;
+  height: 300px;
+  width: 300px;
+}
+
+.project-name{
+  font-family:'Courier New', Courier, monospace;
+  text-align: left;
+  margin-left: 50px;
+  padding-top: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow:
+        0.04em 0 black,
+        0 0.04em black,
+        -0.04em 0 black,
+        0 -0.04em black;
+}
+
+.project-desc{
+  margin-left: 50px;
+  margin-right: 10px;
+  margin-top: -10px;
+  font-family:'Courier New', Courier, monospace;
+  text-align: left;
+  font-size: 14px;
+  text-shadow:
+        0.04em 0 black,
+        0 0.04em black,
+        -0.04em 0 black,
+        0 -0.04em black;
 }
 
 
@@ -123,12 +172,51 @@ nav.top-nav a:active{
 }
 
 /* Slides */
-.mySlides {
+.my-slides {
   margin-left: 125px;
   width: 1000px;
   display: none;
   padding: 80px;
   text-align: left;
+}
+
+.essay-title{
+  font-family:'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow:
+        0.04em 0 black,
+        0 0.04em black,
+        -0.04em 0 black,
+        0 -0.04em black;
+}
+
+.essay-desc{
+  color: white;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 14px;
+  text-shadow:
+        0.04em 0 black,
+        0 0.04em black,
+        -0.04em 0 black,
+        0 -0.04em black;
+}
+
+.my-slides a:link{
+  text-decoration: none;
+  color: white;
+}
+
+.my-slides a:visited{
+  color: white;
+}
+
+.my-slides a:hover{
+  text-decoration: underline;
+}
+
+.my-slides a:active{
+  color: gray;
 }
 
 /* Next & previous buttons */
@@ -188,15 +276,11 @@ nav.top-nav a:active{
   background-color: #717171;
 }
 
-
-
-
-
-
-
-
-/* Stlying for bio page */
+/* Styling for bio page */
 
 #portrait{
   height: 500px;
+  position: relative;
+  top: 200px;
+  left: 500px;
 }

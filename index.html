@@ -5,30 +5,38 @@
     <Link rel="stylesheet" href="styles.css">
   </head>
 <body>
-  <div class = "nav-bar">
-    <nav class = "top-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="bio.html">About Me</a></li>
-          <li><a href="Hum Resume.pdf" target="_blank">Resumé</a></li>
-        </ul>
-    </nav>
-  </div>
+  <!-- Navigation bar -->
+  <nav class = "top-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="bio.html">About Me</a></li>
+        <li><a href="Hum Resume.pdf" target="_blank">Resumé</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+  </nav>
   <div class ="home" title="Photo of Prabhav Jain">
     <div class="text">
       <p>Hello there, I'm</p>
       <p id="me">——Prabhav Jain——</p>
     </div>
   </div>
-  <div class="projects">
+  <!-- Projects section -->
+  <div id="projects">
     <h1 class="project-title">Past Projects</h1>
     <div class="past-projects-container">
-      <a href="machine-learning.html">
+      <!-- individual Projects -->
+      <a href="machine-learning.html" class="project-links">
         <div class="project-wrapper" id="one">
+          <img class="project-image" src="lung-photo.png" alt="Collage of CT scans of patients' lungs"></img>
           <p class="project-name">Machine Learning</p>
-      </div> </a>
+          <p class="project-desc">Exploring a CT scan dataset and planning a Convolutional Neural Net.</p>
+        </div>
+      </a>
       <div class="project-wrapper" id="two">
+        <img class="project-image" src="Results Screen.png" alt="Image of a Bouldering Route Finder App"></img>
         <p class="project-name">Climbing Wall Designer</p>
+        <p class="project-desc">Creating an application to help beginners design their own bouldering routes.</p>
       </div>
     </div>
   </div>
@@ -36,31 +44,31 @@
   <div class="slideshow-container">
     <h1 class="project-title">Past Essays</h1>
     <!-- Full-width slides/quotes -->
-    <div class="mySlides">
+    <div class="my-slides">
       <a href="Hume_and_Miracles.pdf" target="_blank"> <p class="essay-title">Hume on Miracles</p> </a>
-      <p>In this essay I explore and evaluate David Hume's arguments regarding why miracles should never be believed.</p>
+      <p class="essay-desc">In this essay I explore and evaluate David Hume's arguments regarding why miracles should never be believed.</p>
     </div>
 
-    <div class="mySlides">
+    <div class="my-slides">
       <a href="Propaganda.pdf" target="_blank"> <p class="essay-title">Sino-Soviet Alliance Propaganda</p> </a>
-      <p>In this essay I examine the ways in which propaganda was employed by the Chinese government to boost relations with the USSR.</p>
+      <p class="essay-desc">In this essay I examine the ways in which propaganda was employed by the Chinese government to boost relations with the USSR.</p>
     </div>
 
-    <div class="mySlides">
+    <div class="my-slides">
       <a href="Dying_to_Live_Longer.pdf" target="_blank"> <p class="essay-title">Dying to Live Longer</p> </a>
-      <p>An analysis of whether humans should rationally desire immortality, focused on arguments by Bertrand Russel and Lucretius.</p>
+      <p class="essay-desc">An analysis of whether humans should rationally desire immortality, focused on arguments by Bertrand Russel and Lucretius.</p>
     </div>
 
     <!-- Next/prev buttons -->
-    <a class="prev" onclick="plusSlides(-1)" onkeydown="plusSlides(-1)" tabindex=0>&#10094;</a>
-    <a class="next" onclick="plusSlides(1)" onkeydown="plusSlides(1)" tabindex=0>&#10095;</a>
+    <a class="prev" onclick="plusSlides(-1)" onkeypress="Javascript: if (event.keyCode==13) plusSlides(-1);" tabindex=0>&#10094;</a>
+    <a class="next" onclick="plusSlides(1)" onkeypress="Javascript: if (event.keyCode==13) plusSlides(1);" tabindex=0>&#10095;</a>
   </div>
 
   <!-- Dots/bullets/indicators -->
     <div class="dot-container">
-      <span class="dot" onclick="currentSlide(1)" onkeydown="currentSlide(1)" tabindex=0></span>
-      <span class="dot" onclick="currentSlide(2)" onkeydown="currentSlide(2)"tabindex=0></span>
-      <span class="dot" onclick="currentSlide(3)" onkeydown="currentSlide(3)"tabindex=0></span>
+      <span class="dot" onclick="currentSlide(1)" onkeypress="Javascript: if (event.keyCode==13) currentSlide(1);" tabindex=0></span>
+      <span class="dot" onclick="currentSlide(2)" onkeypress="Javascript: if (event.keyCode==13) currentSlide(2);" tabindex=0></span>
+      <span class="dot" onclick="currentSlide(3)" onkeypress="Javascript: if (event.keyCode==13) currentSlide(3);" tabindex=0></span>
     </div>
   <script src="slideshow.js"></script>
 </body>
