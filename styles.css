@@ -88,11 +88,12 @@ nav.top-nav a:active{
 
 #projects{
   background-color: #ddd;
+  height: auto;
 }
 
 .project-title{
   padding-top: 90px;
-  margin-left: 125px;
+  margin-left: 7.5%;
   display:block;
   color: #007304;
   font-family:'Courier New', Courier, monospace;
@@ -101,19 +102,24 @@ nav.top-nav a:active{
 .past-projects-container {
     height: 600px;
 		padding-top: 30px;
-    display:inline-grid;
+    display: grid;
     grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
-}
-
-.project-wrapper{
-  height: 500px;
-  width: 500px;
-  color: white;
 }
 
 .project-links{
-  margin-left: 125px;
+  margin-left: 15%;
+  margin-right: 7.5%;
+}
+
+.project-wrapper{
+  height: 85%;
+  width: auto;
+  color: white;
+  position: relative;
+}
+
+.project-links:hover .project-wrapper{
+  opacity: 0.8;
 }
 
 #one{
@@ -123,21 +129,24 @@ nav.top-nav a:active{
 
 #two{
   float: right;
-  margin-left: 125px;
+  margin-left: 7.5%;
+  margin-right: 15%;
   background-color: #490010 ;
 }
 
 .project-image{
-  margin-left: 100px;
-  margin-top: 60px;
-  height: 300px;
-  width: 300px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 10%;
+  height: auto;
+  width: 60%;
 }
 
 .project-name{
   font-family:'Courier New', Courier, monospace;
   text-align: left;
   margin-left: 50px;
+  margin-right: 50px;
   padding-top: 15px;
   font-weight: bold;
   font-size: 18px;
@@ -150,7 +159,7 @@ nav.top-nav a:active{
 
 .project-desc{
   margin-left: 50px;
-  margin-right: 10px;
+  margin-right: 50px;
   margin-top: -10px;
   font-family:'Courier New', Courier, monospace;
   text-align: left;
@@ -173,8 +182,9 @@ nav.top-nav a:active{
 
 /* Slides */
 .my-slides {
-  margin-left: 125px;
-  width: 1000px;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  width: auto;
   display: none;
   padding: 80px;
   text-align: left;
@@ -235,14 +245,14 @@ nav.top-nav a:active{
 }
 
 .prev{
-  padding-left: 75px;
+  padding-left: 5.5%;
 }
 
 /* Position the "next button" to the right */
 .next {
   position: absolute;
   right: 0;
-  padding-right: 75px;
+  padding-right: 5.5%;
   border-radius: 3px 0 0 3px;
 }
 
