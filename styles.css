@@ -19,7 +19,7 @@ nav.top-nav ul{
   text-align: right;
   padding: 0;
 }
-
+/* styling nav bar text */
 nav.top-nav li{
   font-family:'Courier New', Courier, monospace;
   font-weight: bold;
@@ -34,6 +34,7 @@ nav.top-nav li{
   padding-right: 10px;
 }
 
+/* styling nav bar links and responsiveness */
 nav.top-nav a:link{
   text-decoration: none;
     color: #007304;
@@ -54,7 +55,7 @@ nav.top-nav a:active{
 /* Styling for home page */
 .home {
   /* The image used */
-  background-image: url("main.jpeg");
+  background-image: url("images/main.jpeg");
 
   /* Set a specific height */
   height: 800px;
@@ -99,36 +100,39 @@ nav.top-nav a:active{
   font-family:'Courier New', Courier, monospace;
 }
 
-.past-projects-container {
+.past-projects-container{
     height: 600px;
 		padding-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
+/* styling to make sure link covers correct area */
 .project-links{
   margin-left: 15%;
   margin-right: 7.5%;
-}
-
-.project-wrapper{
   height: 85%;
-  width: auto;
-  color: white;
-  position: relative;
 }
 
 .project-links:hover .project-wrapper{
   opacity: 0.8;
 }
 
+.project-wrapper{
+  width: auto;
+  color: white;
+  position: relative;
+}
+/* styling for left and right projects respectively */
 #one{
   float: left;
+  height: 100%;
   background-color: #00493A;
 }
 
 #two{
   float: right;
+  height: 85%;
   margin-left: 7.5%;
   margin-right: 15%;
   background-color: #490010 ;
@@ -142,6 +146,7 @@ nav.top-nav a:active{
   width: 60%;
 }
 
+/* styling for descriptions and text */
 .project-name{
   font-family:'Courier New', Courier, monospace;
   text-align: left;
@@ -171,16 +176,12 @@ nav.top-nav a:active{
         0 -0.04em black;
 }
 
-
-
-/* Slideshow container */
+/* Slides */
 .slideshow-container {
   top: -30px;
   position: relative;
   background: white;
 }
-
-/* Slides */
 .my-slides {
   margin-left: 7.5%;
   margin-right: 7.5%;
@@ -189,7 +190,7 @@ nav.top-nav a:active{
   padding: 80px;
   text-align: left;
 }
-
+/* styling for descriptions and text */
 .essay-title{
   font-family:'Courier New', Courier, monospace;
   font-weight: bold;
@@ -211,22 +212,18 @@ nav.top-nav a:active{
         -0.04em 0 black,
         0 -0.04em black;
 }
-
-.my-slides a:link{
+/* styling for links to papers */
+.slide-link:link{
   text-decoration: none;
   color: white;
 }
 
-.my-slides a:visited{
+.slide-link:visited{
   color: white;
 }
 
-.my-slides a:hover{
-  text-decoration: underline;
-}
-
-.my-slides a:active{
-  color: gray;
+.slide-link:hover .my-slides{
+  opacity: 0.8;
 }
 
 /* Next & previous buttons */
@@ -262,6 +259,8 @@ nav.top-nav a:active{
   color: white;
 }
 
+/* The code for dot styling is based on https://www.w3schools.com/howto/howto_js_quotes_slideshow.asp */
+
 /* The dot/bullet/indicator container */
 .dot-container {
   text-align: center;
@@ -284,53 +283,4 @@ nav.top-nav a:active{
 /* Add a background color to the active dot/circle */
 .active, .dot:hover {
   background-color: #717171;
-}
-
-/* Styling for bio page */
-
-.bio-container{
-  margin-top: 125px; /* below the nav bar */
-  display: flex;
-	align-items: center;
-	justify-content: center;
-  flex-direction: column;
-  width: 50%;
-  margin-left: 25%;
-  border: 5px #007304 solid;
-  border-radius: 30px;
-}
-
-.bio-info{
-  background-color: #ddd;
-  width: 100%;
-  height: 100%;
-  font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
-  text-align: left;
-  line-height: 125%;
-  border-radius: 0px 0px 25px 25px;
-}
-
-.bio-info p{
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-#portrait{
-  width: 100%;
-  position: relative;
-  border-radius: 25px 25px 0px 0px;
-}
-
-
-/* styling for contact me page */
-.form-container {
-  margin-top: 125px; /* below the nav bar */
-  display: flex;
-	align-items: center;
-	justify-content: center;
-  flex-direction: column;
-  width: 50%;
-  margin-left: 25%;
-  border: 5px #007304 solid;
-  border-radius: 30px;
 }

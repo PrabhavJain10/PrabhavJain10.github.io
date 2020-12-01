@@ -1,0 +1,51 @@
+/* styling for contact me page */
+.form-container {
+  margin-top: 100px; /* have the form below the nav bar */
+  padding: 25px;
+  display: flex;
+	align-items: left;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 25%;
+  border: 5px #007304 solid;
+  border-radius: 30px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.form-container h3{
+  color: #007304;
+}
+
+/* styling the form inputs */
+.form-container input[type="text"], textarea{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 2px solid gray;
+  outline: none;
+}
+
+.form-container textarea{
+  resize: none;
+  height: 150px;
+}
+
+#cphone{
+  margin-bottom: 10px;
+}
+
+input[type=text]:focus,textarea:focus {
+  border: 2px solid blue;
+}
+
+.form-container input[type="submit"]{
+  background-color: #007304;
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}

@@ -1,3 +1,5 @@
+//This code is based on https://www.w3schools.com/howto/howto_js_quotes_slideshow.asp
+
 var slideIndex = 1;
 var colors = ["#1A4314", "#3F4122", "#3D550C"];
 showSlides(slideIndex);
