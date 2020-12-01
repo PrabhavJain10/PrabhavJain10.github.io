@@ -18,13 +18,12 @@
       </ul>
   </nav>
   <div class="form-container">
-    <form method="post" name="contact_form"
-    action="contact_form_handler.php">
+    <form name="contact_form" action="https://formspree.io/f/xjvpejvr" method="POST">
       <label for="name">Your Name:</label><br>
       <input type="text" id="name" name="name"><br>
       <label for="email">Email Address:</label><br>
       <input type="text" id="email" name="email"><br>
-      <label for="phone">US Phone Number (Optional):</label><br>
+      <label for="phone">US Phone Number:</label><br>
       <input type="text" id="phone" name="phone"><br>
       Preferred Method of Contact:<br>
       <input type="radio" id="cemail" name="contact" value="email">
@@ -32,8 +31,8 @@
       <input type="radio" id="cphone" name="contact" value="phone">
       <label for="cphone">Phone</label><br>
       <label for="message">Message:</label><br>
-      <textarea id="message" name="message"></textarea><br> 
-      <input type="submit" value="Submit">
+      <textarea id="message" name="message"></textarea><br>
+      <input type="submit" value="Submit"> 
     </form>
     <script src="form_validation.js"></script>
   </div>
