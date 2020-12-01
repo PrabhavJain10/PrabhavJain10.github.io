@@ -320,3 +320,17 @@ nav.top-nav a:active{
   position: relative;
   border-radius: 25px 25px 0px 0px;
 }
+
+
+/* styling for contact me page */
+.form-container {
+  margin-top: 125px; /* below the nav bar */
+  display: flex;
+	align-items: center;
+	justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 25%;
+  border: 5px #007304 solid;
+  border-radius: 30px;
+}
