@@ -31,3 +31,11 @@
   position: relative;
   border-radius: 25px 25px 0px 0px;
 }
+
+a:link{
+  color: #448899;
+}
+
+a:visited{
+  color: #448899;
+}
