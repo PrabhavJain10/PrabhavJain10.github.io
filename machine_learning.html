@@ -72,7 +72,7 @@
     </section>
     <section class="body-approach">
       <h2>Approach - what kind of CNN should we design?</h2>
-      <p> Due to the nature of the data set there are some difficulties in designing a CNN. For one the required output is actually a prediction of every patient's FVC
+      <p> Due to the nature of the data set there are some difficulties in designing a convulutional neural network (CNN). For one the required output is actually a prediction of every patient's FVC
          measurement for every possible week in order to avoid potential leakage. This means we need to output around 120 predictions per patient.<br><br>
 
          One possible approach is to sample different images from each patient and run them through a CNN. After the convolutional filters, we can then add some fully connected
@@ -91,6 +91,16 @@
            </p>
          </figcaption>
        </figure>
+       <p> <strong>An overview of the strategy: </strong></p>
+       <ul class="body-text">
+         <li>	Pre-process the CT scans into 2.5D representation </li>
+         <li>	Feed them into a modified SqueezeNet </li>
+         <li>	Flatten the output of SqueezeNet CNN and add in some metadata as inputs to a few fully connected layers </li>
+         <li>	Output 120 predictions </li>
+       </ul>
     </section>
+    <section class="next-steps">
+      <h2>Next Steps</h2>
+      <p> The next step is to build an actual CNN and see if the proposed architecture and traning method work! Stay tuned for more. </p>
 </body>
 </html>
