@@ -1,11 +1,65 @@
 .title{
   margin-top: 50px;
+}
+
+.title, .body-metadata, .body-ct, .body-approach{
   padding: 50px 15% 50px 15%;
-  background-color: #ddd;
   font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.title, .body-ct{
+  background-color: #ddd;
 }
 
 h1{
   text-align: center;
   color: #007304;
+  font-size: 28px;
+}
+
+a{
+  color: #007304;
+}
+
+
+h2{
+  text-align: left;
+  color: #007304;
+}
+
+p{
+  font-size: 20px;
+  text-align:justify;
+}
+
+.graphs {
+  border: 1px solid #007304;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.ct-scan{
+  width: 47%;
+  display: inline-flex;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+#left-ct{
+  margin-right: 2%;
+}
+
+#right-ct{
+  margin-left: 2%;
+}
+
+.figure{
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.squeeze-net-photo{
+  border: 1px solid #007304;
+  border-radius: 4px;
 }

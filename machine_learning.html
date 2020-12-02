@@ -30,10 +30,67 @@
       Source Image Consortium (OSIC) and are real clinical data.
     </p>
   </section>
-  <section class="body">
-    <h2>Data Exploration</h2>
+  <section class="body-metadata">
+    <h2>Data Exploration - Metadata</h2>
     <p>The total training data set contains over 34,000 images from 176 patients and is about 13 GB of data.
       Additionally there is also a spreadsheet with metadata (age, sex, smoking status) of all 176 patients and
-      around 1549 FVC measurements at different time periods. 
+      around 1549 FVC measurements at different time periods. Let's explore the distribution of all this data.
+      All of the following plots were produced using plot.ly and python - please look at this
+      <a href="https://nbviewer.jupyter.org/github/PrabhavJain10/Kaggle-Pulmonary-Challenge/blob/master/Data%20Exploration.ipynb"> Jupyter Notebook </a>
+       for more information.
+    </p>
+    <img src="images/file_dist.png" class="graphs" alt="A bar graph exploring the number of files per patient" aria-describedby="file-description"></img>
+    <p id="file-description"> The above graph shows that the number of files per patient is very variable, where each file represents one image of a CT scan.
+       The average patient has 187 files, however some patients have up to 1018 files. This means our eventual model will have to find a way to work with
+       a differing number of inputs.</p>
+    <img src="images/week_dist.png" class="graphs" alt="A bar graph exploring the number of files per week" aria-describedby="week-description"></img>
+    <p id="week-description"> There are some negative values in weeks. These signify measurements taken before the baseline CT scan. This also shows the
+      distribution of the number of FVC values we have per patient. Since weeks correlates perfectly to FVC, ie for every week a patient went in he would
+      have a corresponding FVC value for that week.</p>
+    <img src="images/age_sex_fvc.png" class="graphs" alt="A scatter plot exploring the relationship between age, sex and FVC" aria-describedby="age-description"></img>
+    <p id="age-description"> There is a clear difference in FVC measurements for females and males. Males tend to have higher FVC measrurements.
+      The trend between FVC and age slightly less apparent, but on the whole older people have lower FVC values.</p>
+    <img src="images/fvc_weeks.png" class="graphs" alt="A line plot exploring a specific patients FVC over time" aria-describedby="fvc-description"></img>
+    <p id="fvc-description"> As we can see for most of the patients, FVC decreases as the weeks go by. However there are irregularities and some variations in FVC in that it does not
+      always go down. Furthermore the amount it decreases by is also very variable. Hence, the metadata can only predict so much and we will need our model to
+      extract significant amounts of information from the CT scans.</p>
+  </section>
+  <section class = "body-ct">
+    <h2>Data Exploration - CT Scans</h2>
+    <p> A computerized tomography (CT) scan is shared in files called a DICOM's. Images are 2D whereas CT scans model 3D objects over time. Hence, each CT
+        scan has multiple images that range across body parts and time.</p>
+    <img id="left-ct" src="images/ct-scan.png" class="ct-scan" alt="Single slice CT scan image" aria-describedby="CT-scan-description"></img>
+    <img id="right-ct" src="images/lung-photo.png" class="ct-scan" alt="Multiple slices CT scan image" aria-describedby="CT-scan-description"></img>
+    <span style="color: rgb(32, 143, 251);">Patient id..........: </span> ID00296637202279895784347<br>
+    <span style="color: rgb(221, 182, 43);">Modality............: </span> CT<br>
+    <span style="color: rgb(0, 162, 80);">Body Part Examined..: </span> Chest<br>
+    <span style="color: rgb(32, 143, 251);">Image size.......: </span>  512 x 512, 524288 bytes<br>
+    <span style="color: rgb(221, 182, 43);">Pixel spacing....: </span> [0.714844, 0.714844]<br>
+    <p id="CT-scan-description"> The image on the left shows a singular CT scan or a cross-section of a patients lungs. The image on the right shows a 16 such cross-sections
+      laid next to each other. Below them is the patients metadata which is embedded in the DICOM image. Essentially, there is a lot of data and information present within these
+      CT scans, and so they should help predict FVC quite well if we can properly train a model.</p>
+    </section>
+    <section class="body-approach">
+      <h2>Approach - what kind of CNN should we design?</h2>
+      <p> Due to the nature of the data set there are some difficulties in designing a CNN. For one the required output is actually a prediction of every patient's FVC
+         measurement for every possible week in order to avoid potential leakage. This means we need to output around 120 predictions per patient.<br><br>
+
+         One possible approach is to sample different images from each patient and run them through a CNN. After the convolutional filters, we can then add some fully connected
+         layers where we also input the patients metadata (age, smoking status, gender) and have out the final output layer be 120 nodes where each output corresponds to a
+         week’s FVC measurement. These final few fully connected layers would be doing a regression task as the final output for each node is a continuous number.<br><br>
+
+         The convolutional filters would be modelled on SqueezeNet, a pre-existing CNN architecture which is very accurate on identifying image sets and relatively strealined.
+         Additionally, weighted sums of different feature maps should be used in between and feature maps shoule be concatenated and averaged with a Global Average Pool Layer.
+         This helps combine spatial information from early layers and features information from later layers.
+       </p>
+       <figure class="figure" role="group">
+         <img class="squeeze-net-photo" src=images/squeeze-net.png alt="The proposed CNN. Described in detail below."></img>
+         <figcaption>
+           <p><strong>Figure Caption:</strong> The proposed custom CNN. There are mulitple convolutoinal, fire, pool and softmax layers. Spatial information contained in the feature maps from the second custom
+             Fire Module are weighted with the feature maps of the last custom Fire Module.
+           </p>
+         </figcaption>
+       </figure>
+    </section>
 </body>
 </html>
